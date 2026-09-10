@@ -1,30 +1,42 @@
-import { Glass } from "@samasante/liquid-glass"
+import { GlassCard, GlassButton } from "@zakisheriff/liquid-glass"
+import logo from "./assets/logo.svg"
+import add from "./assets/add.svg"
+import line from "./assets/line.svg"
+import save from "./assets/save.svg"
 
-function FirstPanel() {
+function FirstPanel({ setPanel }) {
     return (
-        <Glass className="panel">
-            <div className="first-header">
-                <div className="logo">
-                    <img src={`${import.meta.env.BASE_URL}logo.svg`} />
-                </div>
-                <div>SeiChan Metro Builder</div>
+        <GlassCard>
+            <div className="header">
+                <img
+                    src={logo}
+                    className="logo"
+                />
+                <span>SeiChan Metro Builder</span>
             </div>
             <div className="divider" />
             <div className="button">
-                <button>
-                    <img src={`${import.meta.env.BASE_URL}add.svg`} />
+                <GlassButton
+                    onClick={() => setPanel("second")}
+                    size="sm"
+                >
+                    <img src={add} />
                     新增車站
-                </button>
-                <button>
-                    <img src={`${import.meta.env.BASE_URL}line.svg`} />
+                </GlassButton>
+                <GlassButton
+                    size="sm"
+                >
+                    <img src={line} />
                     繪製路線
-                </button>
-                <button>
-                    <img src={`${import.meta.env.BASE_URL}export.svg`} />
+                </GlassButton>
+                <GlassButton
+                    size="sm"
+                >
+                    <img src={save} />
                     匯出圖像
-                </button>
+                </GlassButton>
             </div>
-        </Glass>
+        </GlassCard>
     )
 }
 

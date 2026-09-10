@@ -8,12 +8,14 @@ function Canvas() {
             centerOnInit={true}
         >
             <TransformComponent
-                wrapperStyle={{ width: "100%", height: "100%", }}
+                wrapperStyle={{
+                    width: "100%",
+                    height: "100%"
+                }}
             >
                 <svg
                     width="7680"
                     height="4320"
-                    viewBox="0 0 7680 4320"
                 >
                     <pattern
                         id="grid"
